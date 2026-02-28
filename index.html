@@ -1,0 +1,101 @@
+<!DOCTYPE html>  <html lang="uk">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Для Шизуку</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <link rel="preconnect" href="https://fonts.gstatic.com">  
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">  
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1"></script>  
+</head>  <style>  
+    body {  
+        margin: 0;  
+        text-align: center;  
+        background: #1d1d1d;  
+        font: 22px 'Indie Flower', cursive, "Helvetica Neue", Helvetica, Arial, sans-serif;  
+        color: #fff;  
+        overflow-x: hidden;  
+    }  
+  
+    #content {  
+        position: relative;  
+        max-width: 470px;  
+        margin: 0 auto;  
+        line-height: 150%;  
+        padding: 20px;  
+        z-index: 1;  
+    }  
+  
+    h1 {  
+        font-size: 2.5rem;  
+        color: #f7d066;  
+        margin-top: 50px;  
+    }  
+  
+    p {  
+        font-size: 1.2rem;  
+        margin-top: 20px;  
+    }  
+  
+    span {  
+        color: #f7467e;  
+    }  
+  
+    a {  
+        color: #f7d066;  
+        text-decoration: none;  
+    }  
+  
+    a:hover {  
+        text-decoration: underline;  
+    }  
+  
+    @media (max-width: 767px) {  
+        #content {  
+            max-width: 100%;  
+            padding: 10px;  
+        }  
+    }  
+</style>  <body>  
+    <div id="content">  
+        <h1>З Днем народження, Шизуку!</h1>  
+        <p>  
+            Дорога Шизуку,<br>  
+            У цей особливий день бажаю тобі всього найкращого, безмежної радості та щастя!  
+            Нехай кожен новий день приносить світло, тепло і натхнення.  
+            Нехай здійснюються мрії, а поруч завжди будуть щирі люди.  
+            Бажаю фантастичного свята і ще багато-багато щасливих років попереду!<br><br>  
+            <span>З любов’ю, <a href="https://t.me/nikkorii">><</a></span>  
+        </p>  
+    </div>  <script>  
+    function launchConfetti() {  
+        const duration = 2000;  
+        const end = Date.now() + duration;  
+
+        (function frame() {  
+            confetti({  
+                particleCount: 5,  
+                angle: 60,  
+                spread: 55,  
+                origin: { x: 0 },  
+                colors: ['#f7d066', '#f7467e', '#ffffff']  
+            });  
+
+            confetti({  
+                particleCount: 5,  
+                angle: 120,  
+                spread: 55,  
+                origin: { x: 1 },  
+                colors: ['#f7d066', '#f7467e', '#ffffff']  
+            });  
+
+            if (Date.now() < end) {  
+                requestAnimationFrame(frame);  
+            }  
+        })();  
+    }  
+
+    window.onload = launchConfetti;  
+</script>
+
+</body>  
+</html>
